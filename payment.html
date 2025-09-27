@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Aulas de Inglês com Lukas</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#1A1A1A',
+                        'brand-dark-secondary': '#242424',
+                        'brand-green': '#1ED760',
+                        'brand-light': '#F5F5F5',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased">
+
+    <div class="min-h-screen flex flex-col lg:flex-row">
+        <!-- Seção do Formulário -->
+        <main class="w-full lg:w-3/5 p-6 sm:p-8 lg:p-12">
+            <div class="max-w-md mx-auto">
+                <h1 class="text-3xl font-bold mb-2">Finalize sua Inscrição</h1>
+                <p class="text-gray-400 mb-8">Falta pouco para você destravar sua fluência no inglês.</p>
+
+                <!-- Indicador de Etapas -->
+                <div class="flex items-center text-sm mb-8">
+                    <div id="step-indicator-1" class="flex items-center text-brand-green">
+                        <span class="w-6 h-6 rounded-full bg-brand-green text-brand-dark font-bold flex items-center justify-center">1</span>
+                        <span class="ml-2 font-semibold">Seus Dados</span>
+                    </div>
+                    <div class="flex-1 h-px bg-gray-700 mx-4"></div>
+                    <div id="step-indicator-2" class="flex items-center text-gray-500">
+                        <span class="w-6 h-6 rounded-full bg-gray-700 font-bold flex items-center justify-center">2</span>
+                        <span class="ml-2">Pagamento</span>
+                    </div>
+                </div>
+
+                <!-- Formulário - Etapa 1: Dados Pessoais -->
+                <div id="step-1">
+                    <form id="form-step-1">
+                        <div class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300">Nome Completo</label>
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full bg-brand-dark-secondary border border-gray-600 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-brand-green focus:border-brand-green">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300">Melhor E-mail</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full bg-brand-dark-secondary border border-gray-600 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-brand-green focus:border-brand-green">
+                            </div>
+                            <div>
+                                <label for="whatsapp" class="block text-sm font-medium text-gray-300">WhatsApp</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(XX) XXXXX-XXXX" class="mt-1 block w-full bg-brand-dark-secondary border border-gray-600 rounded-md shadow-sm py-3 px-4 focus:outline-none focus:ring-brand-green focus:border-brand-green">
+                            </div>
+                        </div>
+                        <button type="submit" class="mt-10 w-full bg-brand-green text-brand-dark font-bold text-lg py-3 px-6 rounded-lg shadow-lg shadow-green-500/20 transition-transform transform hover:scale-105">
+                            Continuar para Pagamento
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Formulário - Etapa 2: Pagamento -->
+                <div id="step-2" class="hidden">
+                    <div>
+                        <div class="flex border border-gray-700 rounded-lg p-1 mb-6 bg-brand-dark-secondary">
+                            <button id="btn-credit-card" class="flex-1 py-2 text-sm font-semibold rounded-md bg-gray-700">Cartão de Crédito</button>
+                            <button id="btn-pix" class="flex-1 py-2 text-sm font-semibold text-gray-400">Pix</button>
+                        </div>
+
+                        <!-- Detalhes Cartão de Crédito -->
+                        <div id="payment-credit-card">
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="card-number" class="block text-sm font-medium text-gray-300">Número do Cartão</label>
+                                    <input type="text" id="card-number" placeholder="0000 0000 0000 0000" class="mt-1 w-full bg-brand-dark-secondary border border-gray-600 rounded-md py-3 px-4">
+                                </div>
+                                <div>
+                                    <label for="card-name" class="block text-sm font-medium text-gray-300">Nome no Cartão</label>
+                                    <input type="text" id="card-name" placeholder="Como aparece no cartão" class="mt-1 w-full bg-brand-dark-secondary border border-gray-600 rounded-md py-3 px-4">
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="flex-1">
+                                        <label for="card-expiry" class="block text-sm font-medium text-gray-300">Validade</label>
+                                        <input type="text" id="card-expiry" placeholder="MM/AA" class="mt-1 w-full bg-brand-dark-secondary border border-gray-600 rounded-md py-3 px-4">
+                                    </div>
+                                    <div class="flex-1">
+                                        <label for="card-cvc" class="block text-sm font-medium text-gray-300">CVC</label>
+                                        <input type="text" id="card-cvc" placeholder="123" class="mt-1 w-full bg-brand-dark-secondary border border-gray-600 rounded-md py-3 px-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Detalhes Pix -->
+                        <div id="payment-pix" class="hidden text-center">
+                            <p class="text-gray-300 mb-4">Escaneie o QR Code ou use o Pix Copia e Cola.</p>
+                            <div class="bg-white p-4 rounded-lg inline-block">
+                                <img src="https://placehold.co/200x200/cccccc/333333?text=QR+Code+Pix" alt="QR Code Pix" class="mx-auto">
+                            </div>
+                            <input type="text" readonly value="00020126580014br.gov.bcb.pix..." class="mt-4 w-full bg-brand-dark-secondary border border-gray-600 rounded-md py-3 px-4 text-center text-sm">
+                            <button class="mt-2 text-sm text-brand-green font-semibold">Copiar Código</button>
+                        </div>
+                    </div>
+                    
+                    <button id="btn-submit-payment" class="mt-10 w-full bg-brand-green text-brand-dark font-bold text-lg py-3 px-6 rounded-lg shadow-lg shadow-green-500/20 transition-transform transform hover:scale-105 flex items-center justify-center">
+                        <span id="payment-text">Finalizar Pagamento</span>
+                        <svg id="payment-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-brand-dark hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </button>
+                    <button id="btn-back" class="mt-4 w-full text-center text-gray-400 text-sm hover:text-white">Voltar</button>
+                </div>
+                
+                <!-- Etapa 3: Sucesso -->
+                <div id="step-success" class="hidden text-center">
+                    <div class="w-20 h-20 rounded-full bg-brand-green/20 mx-auto flex items-center justify-center">
+                        <div class="w-14 h-14 rounded-full bg-brand-green flex items-center justify-center">
+                            <svg class="w-8 h-8 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                    </div>
+                    <h2 class="text-2xl font-bold mt-6">Pagamento Aprovado!</h2>
+                    <p class="text-gray-400 mt-2">Parabéns! Sua vaga no acompanhamento individual está confirmada. Em instantes, você receberá um e-mail com as instruções para agendarmos nossa primeira aula.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Seção do Resumo do Pedido -->
+        <aside class="w-full lg:w-2/5 bg-brand-dark-secondary p-6 sm:p-8 lg:p-12 border-t lg:border-t-0 lg:border-l border-gray-700">
+            <h2 class="text-xl font-bold mb-6">Resumo do seu Pedido</h2>
+
+            <div class="bg-brand-dark p-6 rounded-lg">
+                <div class="flex items-center justify-between pb-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-gray-700 rounded-md mr-4 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Acompanhamento Individual</p>
+                            <p class="text-sm text-gray-400">Plano Mensal</p>
+                        </div>
+                    </div>
+                    <p class="font-semibold">R$ 200,00</p>
+                </div>
+                
+                <div class="flex justify-between items-center text-sm py-4">
+                    <p class="text-gray-400">Subtotal</p>
+                    <p>R$ 200,00</p>
+                </div>
+                <div class="flex justify-between items-center text-sm pb-4">
+                    <p class="text-gray-400">Desconto</p>
+                    <p class="text-brand-green">- R$ 200,00</p>
+                </div>
+
+                <div class="flex justify-between items-center text-lg font-bold pt-4 border-t border-gray-700">
+                    <p>Total</p>
+                    <p>R$ 200,00</p>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center text-xs text-gray-500 flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                Ambiente 100% seguro.
+            </div>
+        </aside>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Elementos das etapas
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const stepSuccess = document.getElementById('step-success');
+
+        // Indicadores de etapa
+        const stepIndicator1 = document.getElementById('step-indicator-1');
+        const stepIndicator2 = document.getElementById('step-indicator-2');
+        
+        // Formulário da Etapa 1
+        const formStep1 = document.getElementById('form-step-1');
+
+        // Botões
+        const btnBack = document.getElementById('btn-back');
+        const btnSubmitPayment = document.getElementById('btn-submit-payment');
+        const btnCreditCard = document.getElementById('btn-credit-card');
+        const btnPix = document.getElementById('btn-pix');
+        
+        // Seções de pagamento
+        const paymentCreditCard = document.getElementById('payment-credit-card');
+        const paymentPix = document.getElementById('payment-pix');
+        
+        // Spinner
+        const paymentSpinner = document.getElementById('payment-spinner');
+        const paymentText = document.getElementById('payment-text');
+
+        // Função para navegar entre as etapas
+        function goToStep(stepNumber) {
+            step1.classList.add('hidden');
+            step2.classList.add('hidden');
+            stepSuccess.classList.add('hidden');
+
+            if (stepNumber === 1) {
+                step1.classList.remove('hidden');
+                // Atualiza indicador
+                stepIndicator1.classList.add('text-brand-green');
+                stepIndicator1.querySelector('span').classList.add('bg-brand-green', 'text-brand-dark');
+                stepIndicator1.querySelector('span').classList.remove('bg-gray-700');
+                stepIndicator2.classList.add('text-gray-500');
+                stepIndicator2.querySelector('span').classList.add('bg-gray-700');
+                stepIndicator2.querySelector('span').classList.remove('bg-brand-green', 'text-brand-dark');
+            } else if (stepNumber === 2) {
+                step2.classList.remove('hidden');
+                // Atualiza indicador
+                stepIndicator1.classList.remove('text-brand-green');
+                stepIndicator1.querySelector('span').classList.add('bg-gray-700');
+                stepIndicator1.querySelector('span').classList.remove('bg-brand-green', 'text-brand-dark');
+                stepIndicator2.classList.remove('text-gray-500');
+                stepIndicator2.classList.add('text-brand-green');
+                stepIndicator2.querySelector('span').classList.add('bg-brand-green', 'text-brand-dark');
+                stepIndicator2.querySelector('span').classList.remove('bg-gray-700');
+            } else if (stepNumber === 'success') {
+                stepSuccess.classList.remove('hidden');
+            }
+        }
+        
+        // Evento do formulário da etapa 1
+        formStep1.addEventListener('submit', (e) => {
+            e.preventDefault();
+            goToStep(2);
+        });
+
+        // Evento do botão Voltar
+        btnBack.addEventListener('click', () => {
+            goToStep(1);
+        });
+        
+        // Evento para trocar para cartão de crédito
+        btnCreditCard.addEventListener('click', () => {
+            paymentCreditCard.classList.remove('hidden');
+            paymentPix.classList.add('hidden');
+            btnCreditCard.classList.add('bg-gray-700');
+            btnCreditCard.classList.remove('text-gray-400');
+            btnPix.classList.remove('bg-gray-700');
+            btnPix.classList.add('text-gray-400');
+        });
+
+        // Evento para trocar para Pix
+        btnPix.addEventListener('click', () => {
+            paymentCreditCard.classList.add('hidden');
+            paymentPix.classList.remove('hidden');
+            btnPix.classList.add('bg-gray-700');
+            btnPix.classList.remove('text-gray-400');
+            btnCreditCard.classList.remove('bg-gray-700');
+            btnCreditCard.classList.add('text-gray-400');
+        });
+        
+        // Simulação de pagamento
+        btnSubmitPayment.addEventListener('click', async () => {
+            paymentText.classList.add('hidden');
+            paymentSpinner.classList.remove('hidden');
+            btnSubmitPayment.disabled = true;
+
+            // Dados do produto
+            const title = 'Acompanhamento Individual';
+            const price = 200.00;
+
+            try {
+                const response = await fetch('/create_preference', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ title, price })
+                });
+                const data = await response.json();
+                if (data.init_point) {
+                    window.location.href = data.init_point;
+                } else {
+                    alert('Erro ao criar pagamento. Tente novamente.');
+                    paymentText.classList.remove('hidden');
+                    paymentSpinner.classList.add('hidden');
+                    btnSubmitPayment.disabled = false;
+                }
+            } catch (err) {
+                alert('Erro de conexão com o servidor.');
+                paymentText.classList.remove('hidden');
+                paymentSpinner.classList.add('hidden');
+                btnSubmitPayment.disabled = false;
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

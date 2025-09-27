@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas Particulares de Inglês | Fale com Confiança</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#1A1A1A',
+                        'brand-green': '#1ED760',
+                        'brand-light': '#F5F5F5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .faq-answer {
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
+            max-height: 0;
+        }
+        .faq-question.open + .faq-answer {
+            max-height: 500px;
+        }
+        .faq-question .icon-plus { display: block; }
+        .faq-question .icon-minus { display: none; }
+        .faq-question.open .icon-plus { display: none; }
+        .faq-question.open .icon-minus { display: block; }
+    </style>
+</head>
+<body class="bg-brand-dark text-white font-sans">
+
+    <!-- Seção Principal com VSL -->
+    <main class="py-12 md:py-20">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-brand-green font-semibold">MÉTODO DE ACOMPANHAMENTO INDIVIDUAL</p>
+            <h1 class="text-3xl md:text-5xl font-black my-4 max-w-4xl mx-auto leading-tight">FINALMENTE, DESTRAVE SUA FALA NO INGLÊS E CONQUISTE AS OPORTUNIDADES QUE VOCÊ MERECE.</h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">Assista ao vídeo abaixo e descubra como meu método particular pode te levar a pensar em inglês e falar com confiança em menos de 6 meses.</p>
+            
+            <div class="mt-10 w-full max-w-4xl mx-auto aspect-video bg-black rounded-2xl shadow-lg border border-gray-700 flex items-center justify-center">
+                 <p class="text-gray-500">[Seu Vídeo de Vendas Aqui]</p>
+            </div>
+
+            <div id="cta-button-container" class="mt-10">
+                <a href="#pricing" class="bg-brand-green text-brand-dark font-bold text-xl md:text-2xl py-4 px-10 rounded-lg animate-pulse shadow-lg shadow-green-500/20 hover:animate-none transition-transform transform hover:scale-105">
+                    QUERO FALAR INGLÊS COM CONFIANÇA
+                </a>
+                <p class="text-sm text-gray-500 mt-4">Vagas para novas turmas são limitadas. Agende sua sessão estratégica.</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Seção "Para Quem é?" -->
+    <section class="py-16 md:py-24 bg-[#121212]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">Este acompanhamento individual é para você que...</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-brand-dark p-6 rounded-lg border border-gray-800">
+                    <h3 class="font-bold text-lg text-brand-green mb-2">JÁ TENTOU DE TUDO</h3>
+                    <p class="text-gray-400">Já gastou dinheiro com escolas tradicionais e aplicativos, mas ainda sente que não consegue formar uma frase completa em uma conversa.</p>
+                </div>
+                <div class="bg-brand-dark p-6 rounded-lg border border-gray-800">
+                    <h3 class="font-bold text-lg text-brand-green mb-2">PRECISA PARA O TRABALHO</h3>
+                    <p class="text-gray-400">Vê as melhores vagas e promoções passando por você por não ter confiança para participar de uma reunião ou entrevista em inglês.</p>
+                </div>
+                 <div class="bg-brand-dark p-6 rounded-lg border border-gray-800">
+                    <h3 class="font-bold text-lg text-brand-green mb-2">ENTENDE, MAS NÃO FALA</h3>
+                    <p class="text-gray-400">Consegue ler e-mails e até assistir séries, mas na hora de responder alguém, as palavras simplesmente travam e não saem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção do Método -->
+    <section id="method" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">O Método de Acompanhamento Personalizado</h2>
+                <p class="text-gray-400 max-w-3xl mx-auto">Chega de aulas genéricas. Aqui, criamos um plano de voo sob medida para seus objetivos.</p>
+            </div>
+            <div class="space-y-8 max-w-3xl mx-auto">
+                <!-- Pilar 1 -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-brand-green text-brand-dark font-bold text-2xl rounded-full w-12 h-12 flex-shrink-0 flex items-center justify-center">1</div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-1">Diagnóstico e Plano de Ação</h3>
+                        <p class="text-gray-400">Na nossa primeira sessão, faremos um diagnóstico completo para identificar suas travas e seus objetivos. A partir daí, montamos um plano de estudos focado 100% no que você precisa.</p>
+                    </div>
+                </div>
+                <!-- Pilar 2 -->
+                 <div class="flex items-start gap-4">
+                    <div class="bg-brand-green text-brand-dark font-bold text-2xl rounded-full w-12 h-12 flex-shrink-0 flex items-center justify-center">2</div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-1">Aulas Focadas em Conversação Real</h3>
+                        <p class="text-gray-400">Nada de perder tempo com gramática que não se usa. 80% do nosso tempo é dedicado à prática de fala, simulando situações reais do seu dia a dia profissional e pessoal.</p>
+                    </div>
+                </div>
+                <!-- Pilar 3 -->
+                 <div class="flex items-start gap-4">
+                    <div class="bg-brand-green text-brand-dark font-bold text-2xl rounded-full w-12 h-12 flex-shrink-0 flex items-center justify-center">3</div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-1">Material Sob Medida e Suporte Contínuo</h3>
+                        <p class="text-gray-400">Você receberá materiais baseados nos seus interesses (artigos, vídeos, podcasts). Além disso, terá meu suporte via WhatsApp para tirar dúvidas rápidas e não travar sua evolução.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Prova Social (Depoimentos) -->
+    <section id="testimonials" class="py-16 md:py-24 bg-[#121212]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">Resultados de quem confiou no método</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-brand-dark p-8 rounded-lg border border-gray-800">
+                    <p class="text-gray-300 italic mb-6">"Eu tinha pavor de reuniões em inglês. Depois de 3 meses de aulas com [Seu Nome], não só participo como lidero as discussões. Foi o melhor investimento na minha carreira."</p>
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 rounded-full bg-gray-600 mr-4">[Foto Aluno]</div>
+                        <div>
+                            <p class="font-bold">Bruno Mendes</p>
+                            <p class="text-sm text-gray-500">Gerente de Projetos</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="bg-brand-dark p-8 rounded-lg border border-gray-800">
+                    <p class="text-gray-300 italic mb-6">"Sempre achei que o problema era eu. O método personalizado me mostrou que eu só precisava do direcionamento certo. Hoje, viajo sem medo de me comunicar."</p>
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 rounded-full bg-gray-600 mr-4">[Foto Aluna]</div>
+                        <div>
+                            <p class="font-bold">Juliana Alves</p>
+                            <p class="text-sm text-gray-500">Arquiteta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção de Oferta e Preço -->
+    <section id="pricing" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto bg-[#121212] rounded-2xl border-2 border-brand-green shadow-lg shadow-green-500/10">
+                <div class="p-8 md:p-10 text-center">
+                    <h3 class="text-3xl font-extrabold">Aplique para o Acompanhamento Individual</h3>
+                    <p class="text-gray-400 mt-2">Sim, isso é uma aplicação. Eu seleciono os alunos com quem trabalho para garantir 100% de dedicação e resultados.</p>
+                </div>
+                <div class="bg-brand-dark p-8 md:p-10 rounded-b-xl">
+                    <p class="font-bold text-lg mb-4">Se você for aprovado, seu plano de aceleração inclui:</p>
+                    <ul class="space-y-3 mb-8 text-gray-300">
+                        <li class="flex justify-between items-center"><span class="flex items-center"><svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>4 Aulas Particulares ao vivo (60 min/aula)</span><span class="font-semibold">R$ 250,00</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Plano de Estudos Personalizado</span><span class="font-semibold">R$ 50,00</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Material Sob Medida</span><span class="font-semibold">R$ 40,00</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Suporte via WhatsApp</span><span class="font-semibold">R$ 40,00</span></li>
+                        <li class="flex justify-between items-center"><span class="flex items-center"><svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Acesso à Plataforma de Exercícios</span><span class="font-semibold">R$ 20,00</span></li>
+                    </ul>
+
+                    <div class="text-center bg-brand-dark py-6 rounded-lg border border-dashed border-gray-700">
+                        <p class="text-gray-400">Valor total do plano:</p>
+                        <p class="text-2xl text-gray-500 line-through my-1">R$ 400,00 / mês</p>
+                        <p class="text-gray-300">Investimento com desconto especial:</p>
+                        <p class="text-5xl font-black my-2 text-brand-green">R$ 200,00 / mês</p>
+                    </div>
+
+                    <div class="text-center mt-6 bg-green-900/50 border border-brand-green text-brand-green px-4 py-3 rounded-lg">
+                        <strong class="font-bold">OFERTA VÁLIDA ATÉ AMANHÃ, 27 DE SETEMBRO!</strong>
+                        <span class="block text-sm">Garanta sua vaga com 50% de desconto.</span>
+                    </div>
+
+                    <a href="#" class="mt-8 w-full block bg-brand-green text-brand-dark font-bold text-xl text-center py-4 px-10 rounded-lg shadow-lg shadow-green-500/20 transition-transform transform hover:scale-105">
+                        QUERO APLICAR COM DESCONTO
+                    </a>
+                </div>
+            </div>
+             <div class="text-center mt-12">
+                <img src="https://placehold.co/300x40/1A1A1A/FFFFFF?text=Formas+de+Pagamento" alt="Formas de Pagamento" class="mx-auto">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção de Garantia -->
+    <section id="guarantee" class="py-16 md:py-24 bg-[#121212]">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-8 max-w-4xl">
+            <div class="text-center md:text-left md:w-2/3">
+                <h3 class="text-3xl font-bold mb-4">Sua Garantia de Satisfação</h3>
+                <p class="text-gray-400">
+                    O risco é todo meu. Se após a nossa primeira aula você não sentir que este é o melhor caminho para sua fluência, eu devolvo 100% do seu investimento. Sem ressentimentos. Eu só quero alunos comprometidos e satisfeitos.
+                </p>
+            </div>
+            <div class="flex-shrink-0">
+                <img src="https://placehold.co/150x150/1ED760/1A1A1A?text=100%25" alt="Selo de Garantia" class="rounded-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section id="faq" class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Dúvidas Comuns</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-[#121212] rounded-lg">
+                    <button class="faq-question w-full text-left p-5 flex justify-between items-center font-semibold">
+                        <span>Em quanto tempo verei resultados?</span>
+                        <div class="text-brand-green"><span class="icon-plus">+</span><span class="icon-minus">-</span></div>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-400">
+                        <p>Alunos dedicados que seguem o plano de estudos começam a sentir mais confiança já no primeiro mês. Resultados expressivos, como participar de reuniões, costumam aparecer entre 3 e 6 meses.</p>
+                    </div>
+                </div>
+                <div class="bg-[#121212] rounded-lg">
+                    <button class="faq-question w-full text-left p-5 flex justify-between items-center font-semibold">
+                        <span>As aulas são individuais ou em grupo?</span>
+                        <div class="text-brand-green"><span class="icon-plus">+</span><span class="icon-minus">-</span></div>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-400">
+                        <p>100% individuais. Todo o foco do professor é em você, nos seus objetivos e nas suas dificuldades, garantindo uma evolução muito mais rápida que em turmas.</p>
+                    </div>
+                </div>
+                 <div class="bg-[#121212] rounded-lg">
+                    <button class="faq-question w-full text-left p-5 flex justify-between items-center font-semibold">
+                        <span>E se eu precisar desmarcar uma aula?</span>
+                        <div class="text-brand-green"><span class="icon-plus">+</span><span class="icon-minus">-</span></div>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-400">
+                        <p>Temos uma política de cancelamento flexível. Você pode reagendar sua aula sem custo, desde que avise com no mínimo 24 horas de antecedência.</p>
+                    </div>
+                </div>
+                <!-- Nova Pergunta 1 -->
+                <div class="bg-[#121212] rounded-lg">
+                    <button class="faq-question w-full text-left p-5 flex justify-between items-center font-semibold">
+                        <span>Não tenho muito tempo para estudar. Este método serve para mim?</span>
+                        <div class="text-brand-green"><span class="icon-plus">+</span><span class="icon-minus">-</span></div>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-400">
+                        <p>Com certeza. O método é desenhado para se encaixar na sua rotina. Como as aulas e o material são personalizados, focamos apenas no que é essencial para você evoluir. É melhor ter 30 minutos de estudo focado do que horas de conteúdo genérico. Nós otimizamos o seu tempo.</p>
+                    </div>
+                </div>
+                <!-- Nova Pergunta 2 -->
+                <div class="bg-[#121212] rounded-lg">
+                    <button class="faq-question w-full text-left p-5 flex justify-between items-center font-semibold">
+                        <span>Tenho medo de não ter disciplina para continuar.</span>
+                        <div class="text-brand-green"><span class="icon-plus">+</span><span class="icon-minus">-</span></div>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-400">
+                        <p>Esse é o maior benefício de ter um acompanhamento individual. Eu serei seu parceiro de responsabilidade (accountability partner). Com encontros semanais e um plano claro, fica muito mais fácil manter a constância. Você não estará sozinho(a) nessa jornada.</p>
+                    </div>
+                </div>
+                <!-- Nova Pergunta 3 -->
+                <div class="bg-[#121212] rounded-lg">
+                    <button class="faq-question w-full text-left p-5 flex justify-between items-center font-semibold">
+                        <span>Por que o valor é mais alto que o de um curso online?</span>
+                        <div class="text-brand-green"><span class="icon-plus">+</span><span class="icon-minus">-</span></div>
+                    </button>
+                    <div class="faq-answer px-5 pb-5 text-gray-400">
+                        <p>Você não está investindo em um curso, mas em uma mentoria. O valor reflete o tempo e a dedicação 100% focados em você. O resultado é uma evolução muito mais rápida e eficaz do que em qualquer curso gravado ou em turma, o que economiza seu tempo e dinheiro a longo prazo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-10 border-t border-gray-800">
+        <p class="text-gray-500">&copy; 2025 [Seu Nome]. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('open');
+            });
+        });
+
+        // Opcional: Mostrar o botão de CTA após alguns segundos
+        // const ctaButton = document.getElementById('cta-button-container');
+        // ctaButton.style.display = 'none';
+        // setTimeout(() => {
+        //     ctaButton.style.display = 'block';
+        // }, 10000); // 10 segundos
+    </script>
+</body>
+</html>
+
+
